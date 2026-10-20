@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111827">
+    <meta name="description" content="A simple, polished Tic-Tac-Toe game for two players.">
+    <title>Tic-Tac-Toe — Make your move</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Tic-Tac-Toe home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span>little<span class="brand-light">games</span></span>
+        </a>
+        <span class="game-label"><span class="live-dot"></span> TWO PLAYER GAME</span>
+      </header>
+
+      <section class="game-content" aria-labelledby="game-title">
+        <div class="intro">
+          <p class="eyebrow">A CLASSIC, REIMAGINED</p>
+          <h1 id="game-title">Your move<span class="title-period">.</span></h1>
+          <p class="subtitle">Three in a row wins. Bragging rights last forever.</p>
+        </div>
+
+        <section class="scoreboard" aria-label="Score">
+          <div class="player-card active" id="player-x">
+            <span class="player-symbol symbol-x" aria-hidden="true">×</span>
+            <span class="player-name">PLAYER ONE</span>
+            <strong class="player-score" id="score-x">0</strong>
+          </div>
+          <div class="score-divider" aria-hidden="true"><span>—</span></div>
+          <div class="player-card" id="player-o">
+            <span class="player-symbol symbol-o" aria-hidden="true">○</span>
+            <span class="player-name">PLAYER TWO</span>
+            <strong class="player-score" id="score-o">0</strong>
+          </div>
+        </section>
+
+        <div class="turn-status" id="turn-status" role="status" aria-live="polite">
+          <span class="status-marker symbol-x" id="status-marker" aria-hidden="true">×</span>
+          <span id="status-message">Player One's turn</span>
+          <span class="turn-hint">GO FOR IT</span>
+        </div>
+
+        <div class="board" id="board" role="grid" aria-label="Tic-Tac-Toe board">
+          <button class="cell" type="button" role="gridcell" aria-label="Row 1, column 1, empty" data-index="0"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Row 1, column 2, empty" data-index="1"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Row 1, column 3, empty" data-index="2"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Row 2, column 1, empty" data-index="3"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Row 2, column 2, empty" data-index="4"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Row 2, column 3, empty" data-index="5"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Row 3, column 1, empty" data-index="6"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Row 3, column 2, empty" data-index="7"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Row 3, column 3, empty" data-index="8"></button>
+        </div>
+
+        <div class="actions">
+          <button class="button button-primary" id="new-round" type="button">
+            <span aria-hidden="true">↻</span> New round
+          </button>
+          <button class="button button-quiet" id="reset-game" type="button">Reset score</button>
+        </div>
+        <p class="footnote"><span aria-hidden="true">✳</span> Take turns. Have fun. Be nice.</p>
+      </section>
+      <footer class="footer">MADE FOR THE LOVE OF THE GAME <span>·</span> 3 × 3 GRID, INFINITE REMATCHES</footer>
+    </main>
+  </body>
+</html>
